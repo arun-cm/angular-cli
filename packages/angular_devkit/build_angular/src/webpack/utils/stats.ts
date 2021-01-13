@@ -154,7 +154,7 @@ function generateBuildStatsTable(data: BundleStats[], colors: boolean, showTotal
 
 function generateBuildStats(hash: string, time: number, colors: boolean): string {
   const w = (x: string) => colors ? ansiColors.bold.white(x) : x;
-  return `Build at: ${w(new Date().toISOString())} - Hash: ${w(hash)} - Time: ${w('' + time)}ms`;
+  return `Build at: ${w(new Date())} - Hash: ${w(hash)} - Time: ${w('' + time)}ms`;
 }
 
 function statsToString(json: any, statsConfig: any, bundleState?: BundleStats[]): string {
